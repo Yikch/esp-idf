@@ -1,0 +1,20 @@
+menu "Example Configuration"
+
+    orsource "$IDF_PATH/examples/common_components/env_caps/$IDF_TARGET/Kconfig.env_caps"
+
+
+    config TASKA_PERIOD
+        int "Task A period in ms"
+        range 10 3600000
+        default 1000
+        help
+            Define the task A period in milliseconds.
+
+    config TASKB_PERIOD
+        int "Task B period in ms"
+        range 10 3600000
+        default 3000
+        help
+            Define the task B period in milliseconds.
+
+endmenu
